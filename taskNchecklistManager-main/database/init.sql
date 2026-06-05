@@ -1,0 +1,43 @@
+-- Store Task & Checklist Manager - Database Setup Guide
+-- ============================================
+-- IMPORTANT: The application auto-creates all tables and seed data on startup!
+-- Just start the Spring Boot backend - no manual SQL needed.
+--
+-- Prerequisites:
+--   1. PostgreSQL running on localhost:5432
+--   2. Database 'taskmanager' must exist
+--
+-- To create the database:
+--   CREATE DATABASE taskmanager;
+--
+-- What gets created automatically:
+--   Tables (via Hibernate ddl-auto=update)
+--   Shifts: Morning (6-2), Evening (2-10), Night (10-6)
+--   Users:
+--     admin / admin123 (SUPER_ADMIN)
+--     john.manager / password123 (MANAGER)
+--     sarah.lead / password123 (TEAM_LEAD)
+--     mike.staff / password123 (STAFF)
+--     emily.staff / password123 (STAFF)
+--     alex.staff / password123 (STAFF)
+--     lisa.staff / password123 (STAFF)
+--     david.staff / password123 (STAFF)
+--     jenny.lead / password123 (TEAM_LEAD)
+--   Projects: Store Website Revamp, Inventory Management System, Customer Loyalty Program
+--   Teams: Frontend, Backend, QA, Inventory
+--   Tasks: 8 tasks across projects/teams
+--   Checklists: 4 checklists with 8 items
+--   Handovers: 3 shift handovers
+--
+-- ============================================
+-- Troubleshooting:
+-- ============================================
+-- If you need to reset the database:
+--   1. DROP DATABASE taskmanager;
+--   2. CREATE DATABASE taskmanager;
+--   3. Restart the backend application
+--
+-- If users can't log in, check:
+--   1. User status is 'ACTIVE' (not INACTIVE/SUSPENDED/LOCKED)
+--   2. Password is BCrypt encoded
+--   3. Account is not disabled
